@@ -177,8 +177,8 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
+* []() Othneil Drew Readme Template
+* []() John Smilga Project Files
 * []()
 
 
