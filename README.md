@@ -36,7 +36,7 @@ For a copy of this Readme File go to https://github.com/othneildrew/Best-README-
 <br />
 <p align="center">
   <a href="https://github.com/CyclonaGowen/reviews">
-    <img src="images/puppy.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/clonie/image/upload/v1628974483/android-chrome-192x192_yelqmb.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Dog Reviews</h3>
