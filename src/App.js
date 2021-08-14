@@ -6,7 +6,7 @@ function App() {
   <main>
     <section className="container">
       <div className="title">
-        <h2>The dogs of Cortland Station</h2>
+        <h2>Best Dogs Reviews</h2>
         <div className="underline"></div>
       </div>
       <Review />

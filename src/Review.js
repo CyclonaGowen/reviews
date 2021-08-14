@@ -1,10 +1,37 @@
 import React, { useState } from 'react';
-import people from './data';
+import dogs from './data';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 const Review = () => {
   const [index, setIndex] = useState(0);
-  const { name, breed, image, text, owner } = people[index];
-
+  const { name, job, image, text } = dogs[index];
+  const checkNumber = (number) => {
+    if (number > dogs.length - 1) {
+      return 0;
+    }
+    if (number < 0) {
+      return dogs.length - 1;
+    }
+    return number;
+  };
+  const nextPerson = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return checkNumber(newIndex);
+    });
+  };
+  const prevPerson = () => {
+    setIndex((index) => {
+      let newIndex = index - 1;
+      return checkNumber(newIndex);
+    });
+  };
+  const randomPerson = () => {
+    let randomNumber = Math.floor(Math.random() * dogs.length);
+    if (randomNumber === index) {
+      randomNumber = index + 1;
+    }
+    setIndex(checkNumber(randomNumber));
+  };
 
   return (
     <article className='review'>
@@ -15,18 +42,17 @@ const Review = () => {
         </span>
       </div>
       <h4 className='author'>{name}</h4>
-      <p className='breed'>{breed}</p>
+      <p className='job'>{job}</p>
       <p className='info'>{text}</p>
-      <p className='owner'>{owner}</p>
       <div className='button-container'>
-        <button className='prev-btn'>
+        <button className='prev-btn' onClick={prevPerson}>
           <FaChevronLeft />
         </button>
-        <button className='next-btn'>
+        <button className='next-btn' onClick={nextPerson}>
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn'>
+      <button className='random-btn' onClick={randomPerson}>
         surprise me
       </button>
     </article>
